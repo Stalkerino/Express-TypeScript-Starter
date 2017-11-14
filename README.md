@@ -64,4 +64,6 @@ AND
 - Templating EJS
 - Custom CLI in Shell
 
-Victor Bienne
+### Help this project
+
+Feel free to take it and commit your ideas ! :)
