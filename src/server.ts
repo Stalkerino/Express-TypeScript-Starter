@@ -11,7 +11,7 @@ import * as path from 'path';
 (<any>mongoose).Promise = global.Promise;
 
 // import our routers
-import apiRouter from './router/apiRouter';
+// import apiRouter from './router/apiRouter';
 
 class Server {
 
@@ -63,7 +63,7 @@ class Server {
         const router: express.Router = express.Router();
 
         this.app.use('/', router);
-        this.app.use('/api', apiRouter);
+        // this.app.use('/api', apiRouter);
     }
 }
 
