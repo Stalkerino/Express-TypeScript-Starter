@@ -27,17 +27,14 @@ class Server {
     // application config
     public config(): void {
 
-        let options: any = {
-            useMongoClient: true,
+        const MONGO_URI: string = 'mongodb://localhost/express-boilerplate';
+        mongoose.connect(MONGO_URI || process.env.MONGODB_URI, {
             autoReconnect: true,
             reconnectTries: Number.MAX_VALUE,
             reconnectInterval: 500,
             keepAlive: 30000,
             socketTimeoutMS: 30000
-        };
-
-        const MONGO_URI: string = 'mongodb://localhost/express-boilerplate';
-        mongoose.connect(MONGO_URI || process.env.MONGODB_URI, options)
+        })
             .then(() => {
                 console.log('MongoDB Connection Successful');
             })
